@@ -1,0 +1,16 @@
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student</title>
+</head>
+<body>
+	<form action = "{% url 'student-create' %}" method = "POST">
+		{% csrf_token %}
+		{{form|crispy}}
+		<input type="submit" value= "Continue">
+	</form>
+
+</body>
+</html>
